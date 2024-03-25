@@ -89,3 +89,28 @@ function formatPrice($price)
 {
     return '£' . number_format(floatval($price));
 }
+
+/**
+ * Snitize Data
+ * 
+ * @param string $dirtyData
+ * @return string
+ * 
+ */
+function sanitize($dirtyData)
+{
+    return filter_var(trim($dirtyData), FILTER_SANITIZE_SPECIAL_CHARS);
+}
+
+/**
+ * Redirect to a given URL
+ * 
+ * @param string url
+ * @return void
+ */
+
+function redirect($url)
+{
+    header("Location: {$url}");
+    exit;
+}
