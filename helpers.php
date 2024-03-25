@@ -77,3 +77,15 @@ function inspectAndDie($value)
     die(var_dump($value));
     echo '</pre>';
 }
+
+/**
+ * Format price
+ * 
+ * @param string $price
+ * @return string Formatted Price
+ */
+
+function formatPrice($price)
+{
+    return '£' . number_format(floatval($price));
+}
