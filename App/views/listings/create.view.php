@@ -9,29 +9,25 @@
 
         <form method="POST">
             <h2 class="text-2xl font-bold mb-6 text-center text-gray-500">
-                Job Info
+                Property Info
             </h2>
             <div class="mb-4">
-                <input type="text" name="title" placeholder="Job Title" class="w-full px-4 py-2 border rounded focus:outline-none" />
+                <input type="text" name="title" placeholder="Title" class="w-full px-4 py-2 border rounded focus:outline-none" />
             </div>
             <div class="mb-4">
-                <textarea name="description" placeholder="Job Description" class="w-full px-4 py-2 border rounded focus:outline-none"></textarea>
+                <textarea name="description" placeholder="Description" class="w-full px-4 py-2 border rounded focus:outline-none"></textarea>
             </div>
             <div class="mb-4">
-                <input type="text" name="salary" placeholder="Annual Salary" class="w-full px-4 py-2 border rounded focus:outline-none" />
+                <input type="text" name="price" placeholder="price" class="w-full px-4 py-2 border rounded focus:outline-none" />
             </div>
             <div class="mb-4">
-                <input type="text" name="requirements" placeholder="Requirements" class="w-full px-4 py-2 border rounded focus:outline-none" />
+                <input type="text" name="type" placeholder="type" class="w-full px-4 py-2 border rounded focus:outline-none" />
             </div>
-            <div class="mb-4">
-                <input type="text" name="benefits" placeholder="Benefits" class="w-full px-4 py-2 border rounded focus:outline-none" />
-            </div>
+
             <h2 class="text-2xl font-bold mb-6 text-center text-gray-500">
-                Company Info & Location
+                Location & Contact Details
             </h2>
-            <div class="mb-4">
-                <input type="text" name="company" placeholder="Company Name" class="w-full px-4 py-2 border rounded focus:outline-none" />
-            </div>
+
             <div class="mb-4">
                 <input type="text" name="address" placeholder="Address" class="w-full px-4 py-2 border rounded focus:outline-none" />
             </div>
