@@ -2,8 +2,14 @@
 
 require '../helpers.php';
 
-require basePath('Framework/Database.php');
-require basePath('Framework/Router.php');
+//autoloading all the classes under Framework instead of requiring them individually
+$autoLoadClass = function ($class) {
+    $path = basePath('Framework/' . $class . '.php');
+    if (file_exists($path)) {
+        require $path;
+    }
+};
+spl_autoload_register($autoLoadClass);
 
 //Instantiating Router
 $router = new Router();
