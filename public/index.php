@@ -1,15 +1,8 @@
 <?php
-
+require __DIR__ . '/../vendor/autoload.php';
 require '../helpers.php';
 
-//autoloading all the classes under Framework instead of requiring them individually
-$autoLoadClass = function ($class) {
-    $path = basePath('Framework/' . $class . '.php');
-    if (file_exists($path)) {
-        require $path;
-    }
-};
-spl_autoload_register($autoLoadClass);
+use Framework\Router;
 
 //Instantiating Router
 $router = new Router();
