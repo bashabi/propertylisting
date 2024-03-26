@@ -80,6 +80,8 @@ class ListingController
             ]);
         } else {
 
+            //submit data
+
             $fields = [];
             foreach ($inputData as $field => $value) {
                 $fields[] = $field;
@@ -101,5 +103,29 @@ class ListingController
 
             redirect('/listings');
         }
+    }
+
+    public function destroy($params)
+    {
+        $id = $params['id'] ?? '';
+
+        $params = [
+            'id' => $id
+        ];
+
+        $listing = $this->db->query('SELECT * FROM listings where id = :id', $params)->fetch();
+
+        //check if $listing exists
+        if (!$listing) {
+            ErrorController::notFound('Listing not found');
+            return;
+        }
+
+        $this->db->query('DELETE FROM listings WHERE id = :id', $params);
+
+        //set flash message
+        $_SESSION['success_msg'] = 'Listing Deleted successfully';
+
+        redirect('/listings');
     }
 }
